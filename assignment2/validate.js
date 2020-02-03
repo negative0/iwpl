@@ -7,6 +7,18 @@ $(function(){
         }
     });
 
+    $(':input[type="text"]').on('keypress keyup blur', function(){
+
+        const regex = /^[a-zA-Z]+$/g;
+        if(regex.test($(this).val())){
+            $(this).removeClass("border-error");
+            $(this).addClass("border-okay");
+        }else{            
+            $(this).removeClass("border-okay");
+            $(this).addClass("border-error");
+        }
+    });
+
     $(":input[name='sex']").click(function(){
         if($(this).attr('id') === "inlineCheckbox4"){
             if($(this). is(":checked")){
