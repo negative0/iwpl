@@ -19,15 +19,15 @@ $(function(){
         }
     });
 
-    $("#email").on('keypress keyup blur', function(){
+    $("#email").on('keypress keyup blur', function(e){
         const regex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/g;
         if(regex.test( $(this).val())){
-            // $(this).removeClass("border-danger");
-            // $(this).addClass("border-success");
+            $(this).removeClass("border-error");
+            $(this).addClass("border-okay");
             $("#emailError").html("<p class='text-success'>Looks good!</p>");
         }else{            
-            // $(this).removeClass("border-success");
-            // $(this).addClass("border-danger");
+            $(this).removeClass("border-okay");
+            $(this).addClass("border-error");
             $("#emailError").html("<p class='text-danger'>Nah!</p>");
 
         }
@@ -36,14 +36,12 @@ $(function(){
     $("#phone").on('keypress keyup blur', function(){
         const regex = /[0]?[987][0-9]{9}/g;
         if(regex.test( $(this).val())){
-            // $(this).removeClass("border-danger");
-
-            // $(this).addClass("border-success");
+            $(this).removeClass("border-error");
+            $(this).addClass("border-okay");
             $("#phoneError").html("<p class='text-success'>Looks good!</p>");
         }else{            
-            // $(this).removeClass("border-success");
-            // $(this).addClass("border-danger");
-            
+            $(this).removeClass("border-okay");
+            $(this).addClass("border-error");
 
 
             $("#phoneError").html("<p class='text-danger'>Nah!</p>");

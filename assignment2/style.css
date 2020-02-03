@@ -1,0 +1,6 @@
+.border-error{
+    border-color: red !important;
+}
+.border-okay {
+    border-color: green !important;
+}
