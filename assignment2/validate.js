@@ -18,6 +18,19 @@ $(function(){
             $("#sexError").html("")
         }
     });
+    $("#age").keyup(function() {
+        let age = parseInt($(this).val());
+       
+        if(age > 100 && age < 200){
+            $("#ageError").html("<p class='text-danger'>Really?</p>")
+            return;
+        }else if(age >= 200){
+            $("#ageError").html("<p class='text-danger'>Control Uday Control</p>")
+            return;
+        }
+        $("#ageError").html("");
+
+    });
 
     $("#email").on('keypress keyup blur', function(e){
         const regex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/g;
