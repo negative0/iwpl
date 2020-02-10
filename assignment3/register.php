@@ -6,7 +6,7 @@ require_once "config.php";
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
  
-// Processing form data when form is submitted
+// Processing form data wh\         en form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Validate username
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Redirect to login page
                 header("location: login.php");
             } else{
-                echo "Something went wrong. Please try again later.";
+                echo "Something went wrong. Please try again later.here";
             }
         }
          
